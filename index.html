@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- my css -->
+	<link rel="stylesheet" href="style.css">
+	<title>Tekan untuk gerhana</title>
+</head>
+<body id="bg">
+
+	<div class="container">
+
+		<div class="matahari">
+			<div class="bulan" id="bulan"></div>
+		</div>
+
+		<div class="cont-button">
+			<button id="btn-1" class="btn">Cerah</button>
+			<button id="btn-2" class="btn">Gerhana</button>
+		</div>
+	</div>
+
+
+
+	<script>
+		document.getElementById('btn-2').addEventListener('click', function() {
+			document.getElementById('bulan').style.margin = '0 0 0 0';
+			document.getElementById('bg').style.background = 'black';
+			document.getElementById('btn-2').style.border = '3px solid #fff';
+			document.getElementById('btn-2').style.color = '#fff';
+			document.getElementById('btn-1').style.border = '3px solid #fff';
+			document.getElementById('btn-1').style.color = '#fff';
+		});
+		document.getElementById('btn-1').addEventListener('click', function() {
+			document.getElementById('bulan').style.margin = null ;
+			document.getElementById('bg').style.background = null ;
+			document.getElementById('btn-2').style.border = null;
+			document.getElementById('btn-2').style.color = null;
+			document.getElementById('btn-1').style.border = null;
+			document.getElementById('btn-1').style.color = null;
+		});
+	</script>
+</body>
+</html>
